@@ -8,7 +8,7 @@ class NotNerdyApp < Sinatra::Base
 
   post "/" do
     if params[:answer] == "yes"
-      redirect "/something", 307
+      redirect "/something"
     else
       "You should give us your 'answer'"
     end
@@ -20,7 +20,7 @@ class NotNerdyApp < Sinatra::Base
 
   put "/something" do
     if params[:name]
-      redirect "/next_thing", 307
+      redirect "/next_thing"
     else
       ""
     end
